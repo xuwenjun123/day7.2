@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jinja2</title>
+        <style>
+             .info{
+                 color: green;
+             }
+             
+        </style>
+    </head>
+
+
+    <body>
+        <h1> 你好：<span class="info">{{ info.name }}</span></h1>
+        <p> I am <span class="info">{{ info.age }}</span> years old</p>
+        {% if info.gender == 'nv' %}
+        <p>I am <span class="info">小姐姐</span></p>
+        {% else %}
+        <p>我是一个<span class="info">小哥哥</span></p>
+        {% endif %}
+        <p>
+            我想吃：
+            <ul>
+                {% for food in menu %}
+                    {% if loop.first == True0 %} 
+                        <li>{{ loop.index }} . <strong>{{ food }}</strong></li>
+                    {% elif loop.last == True %}
+                        <li style="color: green;">{{ loop.index }} . {{ food }}</li>
+                    {% else %}
+                        <li>{{ loop.index }} . {{ food }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

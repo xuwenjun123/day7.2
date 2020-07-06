@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+
+{% block stu_info %}
+<h2>{{ name }}</h2>
+<hr>
+
+<img src="/static/img/{{ stu_id }}.img" width="300px">
+
+<ul>
+    <li>学号：{{ stu_id }}</li> 
+    <li>性别：{{ stu.gender }}</li>
+    <li>生日：{{ stu.birthday }}</li>
+    <li>简介：{{ stu.description }}</li>
+    <li>城市：{{ stu.city }}</li>
+</ul>
+{% endblock %}
